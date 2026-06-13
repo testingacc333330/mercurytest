@@ -1,5 +1,5 @@
 import fs from "node:fs"
-import { RCC_KEY } from "$env/static/private"
+import { RCC_KEY } from "$env/dynamic/private"
 import config from "$lib/server/config"
 import { db } from "$lib/server/surreal"
 import createRenderQuery from "./createRender.surql"

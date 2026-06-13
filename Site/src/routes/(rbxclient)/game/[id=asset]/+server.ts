@@ -1,5 +1,5 @@
 import { error } from "@sveltejs/kit"
-// import { GAMESERVER_KEY } from "$env/static/private"
+// import { GAMESERVER_KEY } from "$env/dynamic/private"
 import { find } from "$lib/server/surreal"
 
 export async function GET({ params }) {

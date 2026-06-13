@@ -1,5 +1,5 @@
 import { error } from "@sveltejs/kit"
-import { RCC_KEY } from "$env/static/private"
+import { RCC_KEY } from "$env/dynamic/private"
 import { db } from "$lib/server/surreal"
 import pingQuery from "./ping.surql"
 

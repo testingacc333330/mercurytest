@@ -1,5 +1,5 @@
 import { error } from "@sveltejs/kit"
-import { RCC_KEY } from "$env/static/private"
+import { RCC_KEY } from "$env/dynamic/private"
 import { db, Record } from "$lib/server/surreal"
 import completeQuery from "./complete.surql"
 import renderQuery from "./render.surql"
