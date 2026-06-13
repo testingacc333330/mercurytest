@@ -2,11 +2,11 @@
 // If you're running in production, you'll need to rebuild Mercury Core to apply changes.
 
 export default {
-	Name: "Mercury",
-	Domain: "mercs.dev",
+	Name: "Missable",
+	Domain: "mis.testingsweb.com",
 	DomainInsecure: "www.mercs.dev",
 	RCCServiceProxyURL: "http://localhost:64990",
-	LauncherURI: "mercury-launcher:",
+	LauncherURI: "missable:",
 	CurrencySymbol: "屌",
 	Pages: ["Statistics", "Forum", "Groups"],
 
@@ -43,14 +43,14 @@ export default {
 	Branding: {
 		Favicon: "Branding/Favicon.svg",
 		Icon: "Branding/Icon.svg",
-		Tagline: "Revival tagline",
+		Tagline: "Insert a Stupid Tagline for a revival here",
 		Descriptions: {
-			"Endless possibilites":
-				"Create or play your favourite games and customise your character with items on our catalog.",
-			"New features":
-				"In addition to full client usability, additional features such as security fixes, QoL fixes and an easy to use website make your experience better.",
-			"Same nostalgia":
-				"All of our clients will remain as vanilla as possible, to make sure it's exactly as you remember it.",
+			"Create games, for free this time":
+				"No stupid corporation trying to explode you!",
+			"Friend and play together":
+				"Bring friends to play your games or other people's games!",
+			"Be the economy":
+				"Earn currency and buy new fits for your avatar!"
 		},
 	},
 
@@ -79,7 +79,7 @@ export default {
 	Registration: {
 		Keys: {
 			Enabled: true,
-			Prefix: "mercurkey-",
+			Prefix: "missable-",
 		},
 		Emails: true,
 	},

@@ -5,6 +5,8 @@ services:
     database:
         # not :nightly because doing that once caused failures when graph linking
         # and also caused errors with query parameters (twice)
+        env_file: 
+            - .env
         build: ./Database
         ports:
             - 8000:8000
@@ -18,6 +20,8 @@ services:
             - surrealkv://database
 
     economy:
+        env_file: 
+            - .env
         build: ./Economy
         ports:
             - 2009:2009
@@ -26,6 +30,8 @@ services:
             - ./data/economy:/data/economy
 
     site:
+        env_file: 
+            - .env
         build: .
         ports:
             - 4443:4443

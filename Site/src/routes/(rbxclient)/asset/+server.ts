@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto"
 import { error } from "@sveltejs/kit"
-import { OPEN_CLOUD_KEY } from "$env/dynamic/private"
+import { OPEN_CLOUD_KEY } from "$env/static/private"
 import { intRegex } from "$lib/paramTests"
 import config from "$lib/server/config"
 import { db, Record } from "$lib/server/surreal"
