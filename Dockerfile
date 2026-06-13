@@ -21,6 +21,7 @@ COPY mercury.core.ts mercury.core.ts
 
 # build the app
 WORKDIR /app/Site
+RUN bun i
 RUN bun run build
 
 # # run the app
