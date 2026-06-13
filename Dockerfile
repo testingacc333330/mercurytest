@@ -3,6 +3,10 @@
 FROM oven/bun AS base
 
 # build the app
+RUN pwd
+RUN ls -la
+RUN ls -la /app
+RUN ls -la /app/Site
 COPY .env /app/Site/.env
 WORKDIR /app
 
