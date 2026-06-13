@@ -1,6 +1,9 @@
 # use the official Bun image
 # see all versions at https://hub.docker.com/r/oven/bun/tags
 FROM oven/bun AS base
+
+# build the app
+COPY .env /app/Site/.env
 WORKDIR /app
 
 # install dependencies into temp directory
@@ -18,9 +21,6 @@ COPY --from=install /temp/prod/node_modules node_modules
 COPY Assets Assets
 COPY Site Site
 COPY mercury.core.ts mercury.core.ts
-
-# build the app
-COPY /app/.env /app/Site/.env
 
 WORKDIR /app/Site
 RUN bun i
