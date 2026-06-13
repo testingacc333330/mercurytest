@@ -4,13 +4,6 @@ FROM oven/bun AS base
 
 WORKDIR /app
 
-RUN echo "===== DEBUG =====" && \
-    pwd && \
-    ls -la ../ && \
-    find /app -name ".env" 2>/dev/null && \
-    env | sort
-COPY .env /app/Site/.env
-
 # install dependencies into temp directory
 # this will cache them and speed up future builds
 FROM base AS install
@@ -25,6 +18,7 @@ FROM base AS release
 COPY --from=install /temp/prod/node_modules node_modules
 COPY Assets Assets
 COPY Site Site
+COPY .env .env
 COPY mercury.core.ts mercury.core.ts
 
 WORKDIR /app/Site
