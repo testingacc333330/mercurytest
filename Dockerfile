@@ -20,6 +20,7 @@ COPY Assets Assets
 COPY Site Site
 COPY mercury.core.ts mercury.core.ts
 
+RUN ls /app/
 COPY /app/.env /app/Site/.env
 
 WORKDIR /app/Site
