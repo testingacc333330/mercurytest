@@ -4,6 +4,8 @@ FROM oven/bun AS base
 
 WORKDIR /app
 
+COPY .env /app/Site/.env
+
 # install dependencies into temp directory
 # this will cache them and speed up future builds
 FROM base AS install
@@ -19,9 +21,6 @@ COPY --from=install /temp/prod/node_modules node_modules
 COPY Assets Assets
 COPY Site Site
 COPY mercury.core.ts mercury.core.ts
-
-RUN ls /app/
-COPY /app/.env /app/Site/.env
 
 WORKDIR /app/Site
 RUN bun i
