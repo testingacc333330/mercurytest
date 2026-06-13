@@ -6,7 +6,7 @@ WORKDIR /app
 
 RUN echo "===== DEBUG =====" && \
     pwd && \
-    ls -la && \
+    ls -la ../ && \
     find /app -name ".env" 2>/dev/null && \
     env | sort
 COPY .env /app/Site/.env
