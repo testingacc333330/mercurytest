@@ -18,7 +18,6 @@ FROM base AS release
 COPY --from=install /temp/prod/node_modules node_modules
 COPY Assets Assets
 COPY Site Site
-COPY .env .env
 COPY mercury.core.ts mercury.core.ts
 
 WORKDIR /app/Site
