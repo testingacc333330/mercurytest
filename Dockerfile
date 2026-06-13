@@ -20,7 +20,7 @@ COPY Site Site
 COPY mercury.core.ts mercury.core.ts
 
 # build the app
-COPY .env /app/Site/.env
+COPY /app/.env /app/Site/.env
 
 WORKDIR /app/Site
 RUN bun i
